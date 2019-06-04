@@ -52,8 +52,38 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Jednostki  i miary.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Jednostki  i miary.Designer.cs">
+      <DependentUpon>Jednostki  i miary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Kalkulator.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Kalkulator.Designer.cs">
+      <DependentUpon>Kalkulator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="konwenter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="konwenter.Designer.cs">
+      <DependentUpon>konwenter.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Jednostki  i miary.resx">
+      <DependentUpon>Jednostki  i miary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kalkulator.resx">
+      <DependentUpon>Kalkulator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="konwenter.resx">
+      <DependentUpon>konwenter.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -75,6 +105,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
