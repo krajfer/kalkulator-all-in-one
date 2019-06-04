@@ -26,6 +26,181 @@ namespace kalku_all_in_one
             
         }
 
+        private void bpiec_Click(object sender, EventArgs e)
+        {
+            if (textBox1.Text == "0" && textBox1.Text != null)
+            {
+                textBox1.Text = "5";
+            }
+            else
+            {
+                textBox1.Text = textBox1.Text + "5";
+            }
+        }
+
+        private void bdodawanie_Click(object sender, EventArgs e)
+        {
+            liczba1 = decimal.Parse(textBox1.Text);
+            operacja =  "+";
+            textBox1.Text =  textBox1.Text + "+";
+        }
+
+        private void bodejmowanie_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bmnozenie_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bdzielenie_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void bpierwiastek_Click(object sender, EventArgs e)
+        {
+            textBox1.Text = (Math.Sqrt(double.Parse(textBox1.Text))).ToString();
+        }
+
+        private void bpotega_Click(object sender, EventArgs e)
+        {
+            textBox1.Text = (Math.Exp(double.Parse(textBox1.Text))).ToString();
+        }
+
+        private void breset_Click(object sender, EventArgs e)
+        {
+            textBox1.Text = "0";
+        }
+
+        private void bprzecinek_Click(object sender, EventArgs e)
+        {
+           
+            {
+                textBox1.Text = textBox1.Text + ",";
+            }
+        }
+
+        private void bzero_Click(object sender, EventArgs e)
+        {
+            if (textBox1.Text == "0" && textBox1.Text != null)
+            {
+                textBox1.Text = "0";
+            }
+            else
+            {
+                textBox1.Text = textBox1.Text + "0";
+            }
+        }
+
+        private void btrzy_Click(object sender, EventArgs e)
+        {
+            if (textBox1.Text == "0" && textBox1.Text != null)
+            {
+                textBox1.Text = "3";
+            }
+            else
+            {
+                textBox1.Text = textBox1.Text + "3";
+            }
+        }
+
+        private void bdwa_Click(object sender, EventArgs e)
+        {
+            if (textBox1.Text == "0" && textBox1.Text != null)
+            {
+                textBox1.Text = "2";
+            }
+            else
+            {
+                textBox1.Text = textBox1.Text + "2";
+            }
+        }
+
+        private void bjeden_Click(object sender, EventArgs e)
+        {
+            if (textBox1.Text == "0" && textBox1.Text != null)
+            {
+                textBox1.Text = "1";
+            }
+            else
+            {
+                textBox1.Text = textBox1.Text + "1";
+            }
+        }
+
+        private void bszesc_Click(object sender, EventArgs e)
+        {
+            if (textBox1.Text == "0" && textBox1.Text != null)
+            {
+                textBox1.Text = "6";
+            }
+            else
+            {
+                textBox1.Text = textBox1.Text + "6";
+            }
+        }
+
+        private void bwynik_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bcztery_Click(object sender, EventArgs e)
+        {
+            if (textBox1.Text == "0" && textBox1.Text != null)
+            {
+                textBox1.Text = "4";
+            }
+            else
+            {
+                textBox1.Text = textBox1.Text + "4";
+            }
+        }
+
+        private void bdziewiec_Click(object sender, EventArgs e)
+        {
+            if (textBox1.Text == "0" && textBox1.Text != null)
+            {
+                textBox1.Text = "9";
+            }
+            else
+            {
+                textBox1.Text = textBox1.Text + "9";
+            }
+        }
+
+        private void bosiem_Click(object sender, EventArgs e)
+        {
+            if (textBox1.Text == "0" && textBox1.Text != null)
+            {
+                textBox1.Text = "8";
+            }
+            else
+            {
+                textBox1.Text = textBox1.Text + "8";
+            }
+        }
+
+        private void bsiedem_Click(object sender, EventArgs e)
+        {
+            if (textBox1.Text == "0" && textBox1.Text != null)
+            {
+                textBox1.Text = "7";
+            }
+            else
+            {
+                textBox1.Text = textBox1.Text + "7";
+            }
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
         private void Kalkulator_Load(object sender, EventArgs e)
         {
 

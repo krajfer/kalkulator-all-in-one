@@ -33,9 +33,9 @@
             this.konwenterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.jednostkiIMiaryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.kalkulator1 = new kalku_all_in_one.Kalkulator();
             this.konwenter1 = new kalku_all_in_one.konwenter();
             this.jednostki__i_miary1 = new kalku_all_in_one.Jednostki__i_miary();
+            this.kalkulator1 = new kalku_all_in_one.Kalkulator();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -72,22 +72,13 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.kalkulator1);
             this.panel1.Controls.Add(this.konwenter1);
             this.panel1.Controls.Add(this.jednostki__i_miary1);
-            this.panel1.Controls.Add(this.kalkulator1);
             this.panel1.Location = new System.Drawing.Point(1, 37);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(722, 479);
             this.panel1.TabIndex = 1;
-            // 
-            // kalkulator1
-            // 
-            this.kalkulator1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.kalkulator1.Location = new System.Drawing.Point(0, 0);
-            this.kalkulator1.Name = "kalkulator1";
-            this.kalkulator1.Size = new System.Drawing.Size(722, 479);
-            this.kalkulator1.TabIndex = 2;
-            this.kalkulator1.Load += new System.EventHandler(this.kalkulator1_Load);
             // 
             // konwenter1
             // 
@@ -105,6 +96,15 @@
             this.jednostki__i_miary1.Name = "jednostki__i_miary1";
             this.jednostki__i_miary1.Size = new System.Drawing.Size(722, 479);
             this.jednostki__i_miary1.TabIndex = 0;
+            // 
+            // kalkulator1
+            // 
+            this.kalkulator1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.kalkulator1.Location = new System.Drawing.Point(0, 0);
+            this.kalkulator1.Name = "kalkulator1";
+            this.kalkulator1.Size = new System.Drawing.Size(722, 479);
+            this.kalkulator1.TabIndex = 2;
+            this.kalkulator1.Load += new System.EventHandler(this.kalkulator1_Load);
             // 
             // Form1
             // 

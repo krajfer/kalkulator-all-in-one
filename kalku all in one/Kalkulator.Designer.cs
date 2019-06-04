@@ -28,199 +28,218 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
-            this.reset = new System.Windows.Forms.Button();
-            this.button13 = new System.Windows.Forms.Button();
-            this.button14 = new System.Windows.Forms.Button();
-            this.button15 = new System.Windows.Forms.Button();
-            this.button16 = new System.Windows.Forms.Button();
-            this.button17 = new System.Windows.Forms.Button();
-            this.button18 = new System.Windows.Forms.Button();
-            this.button19 = new System.Windows.Forms.Button();
+            this.bsiedem = new System.Windows.Forms.Button();
+            this.bosiem = new System.Windows.Forms.Button();
+            this.bdziewiec = new System.Windows.Forms.Button();
+            this.bcztery = new System.Windows.Forms.Button();
+            this.bpiec = new System.Windows.Forms.Button();
+            this.bszesc = new System.Windows.Forms.Button();
+            this.bjeden = new System.Windows.Forms.Button();
+            this.bdwa = new System.Windows.Forms.Button();
+            this.btrzy = new System.Windows.Forms.Button();
+            this.bzero = new System.Windows.Forms.Button();
+            this.bprzecinek = new System.Windows.Forms.Button();
+            this.breset = new System.Windows.Forms.Button();
+            this.bpotega = new System.Windows.Forms.Button();
+            this.bpierwiastek = new System.Windows.Forms.Button();
+            this.bdzielenie = new System.Windows.Forms.Button();
+            this.bmnozenie = new System.Windows.Forms.Button();
+            this.bodejmowanie = new System.Windows.Forms.Button();
+            this.bdodawanie = new System.Windows.Forms.Button();
+            this.bwynik = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // button1
+            // bsiedem
             // 
-            this.button1.Location = new System.Drawing.Point(260, 246);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(42, 43);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "7";
-            this.button1.UseVisualStyleBackColor = true;
+            this.bsiedem.Location = new System.Drawing.Point(260, 246);
+            this.bsiedem.Name = "bsiedem";
+            this.bsiedem.Size = new System.Drawing.Size(42, 43);
+            this.bsiedem.TabIndex = 0;
+            this.bsiedem.Text = "7";
+            this.bsiedem.UseVisualStyleBackColor = true;
+            this.bsiedem.Click += new System.EventHandler(this.bsiedem_Click);
             // 
-            // button2
+            // bosiem
             // 
-            this.button2.Location = new System.Drawing.Point(308, 246);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(42, 43);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "8";
-            this.button2.UseVisualStyleBackColor = true;
+            this.bosiem.Location = new System.Drawing.Point(308, 246);
+            this.bosiem.Name = "bosiem";
+            this.bosiem.Size = new System.Drawing.Size(42, 43);
+            this.bosiem.TabIndex = 1;
+            this.bosiem.Text = "8";
+            this.bosiem.UseVisualStyleBackColor = true;
+            this.bosiem.Click += new System.EventHandler(this.bosiem_Click);
             // 
-            // button3
+            // bdziewiec
             // 
-            this.button3.Location = new System.Drawing.Point(357, 246);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(42, 43);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "9";
-            this.button3.UseVisualStyleBackColor = true;
+            this.bdziewiec.Location = new System.Drawing.Point(357, 246);
+            this.bdziewiec.Name = "bdziewiec";
+            this.bdziewiec.Size = new System.Drawing.Size(42, 43);
+            this.bdziewiec.TabIndex = 2;
+            this.bdziewiec.Text = "9";
+            this.bdziewiec.UseVisualStyleBackColor = true;
+            this.bdziewiec.Click += new System.EventHandler(this.bdziewiec_Click);
             // 
-            // button4
+            // bcztery
             // 
-            this.button4.Location = new System.Drawing.Point(260, 295);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(42, 43);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "4";
-            this.button4.UseVisualStyleBackColor = true;
+            this.bcztery.Location = new System.Drawing.Point(260, 295);
+            this.bcztery.Name = "bcztery";
+            this.bcztery.Size = new System.Drawing.Size(42, 43);
+            this.bcztery.TabIndex = 3;
+            this.bcztery.Text = "4";
+            this.bcztery.UseVisualStyleBackColor = true;
+            this.bcztery.Click += new System.EventHandler(this.bcztery_Click);
             // 
-            // button5
+            // bpiec
             // 
-            this.button5.Location = new System.Drawing.Point(308, 295);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(42, 43);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "5";
-            this.button5.UseVisualStyleBackColor = true;
+            this.bpiec.Location = new System.Drawing.Point(308, 295);
+            this.bpiec.Name = "bpiec";
+            this.bpiec.Size = new System.Drawing.Size(42, 43);
+            this.bpiec.TabIndex = 4;
+            this.bpiec.Text = "5";
+            this.bpiec.UseVisualStyleBackColor = true;
+            this.bpiec.Click += new System.EventHandler(this.bpiec_Click);
             // 
-            // button6
+            // bszesc
             // 
-            this.button6.Location = new System.Drawing.Point(357, 295);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(42, 43);
-            this.button6.TabIndex = 5;
-            this.button6.Text = "6";
-            this.button6.UseVisualStyleBackColor = true;
+            this.bszesc.Location = new System.Drawing.Point(357, 295);
+            this.bszesc.Name = "bszesc";
+            this.bszesc.Size = new System.Drawing.Size(42, 43);
+            this.bszesc.TabIndex = 5;
+            this.bszesc.Text = "6";
+            this.bszesc.UseVisualStyleBackColor = true;
+            this.bszesc.Click += new System.EventHandler(this.bszesc_Click);
             // 
-            // button7
+            // bjeden
             // 
-            this.button7.Location = new System.Drawing.Point(260, 344);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(42, 43);
-            this.button7.TabIndex = 6;
-            this.button7.Text = "1";
-            this.button7.UseVisualStyleBackColor = true;
+            this.bjeden.Location = new System.Drawing.Point(260, 344);
+            this.bjeden.Name = "bjeden";
+            this.bjeden.Size = new System.Drawing.Size(42, 43);
+            this.bjeden.TabIndex = 6;
+            this.bjeden.Text = "1";
+            this.bjeden.UseVisualStyleBackColor = true;
+            this.bjeden.Click += new System.EventHandler(this.bjeden_Click);
             // 
-            // button8
+            // bdwa
             // 
-            this.button8.Location = new System.Drawing.Point(308, 344);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(42, 43);
-            this.button8.TabIndex = 7;
-            this.button8.Text = "2";
-            this.button8.UseVisualStyleBackColor = true;
+            this.bdwa.Location = new System.Drawing.Point(308, 344);
+            this.bdwa.Name = "bdwa";
+            this.bdwa.Size = new System.Drawing.Size(42, 43);
+            this.bdwa.TabIndex = 7;
+            this.bdwa.Text = "2";
+            this.bdwa.UseVisualStyleBackColor = true;
+            this.bdwa.Click += new System.EventHandler(this.bdwa_Click);
             // 
-            // button9
+            // btrzy
             // 
-            this.button9.Location = new System.Drawing.Point(357, 344);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(42, 43);
-            this.button9.TabIndex = 8;
-            this.button9.Text = "3";
-            this.button9.UseVisualStyleBackColor = true;
+            this.btrzy.Location = new System.Drawing.Point(357, 344);
+            this.btrzy.Name = "btrzy";
+            this.btrzy.Size = new System.Drawing.Size(42, 43);
+            this.btrzy.TabIndex = 8;
+            this.btrzy.Text = "3";
+            this.btrzy.UseVisualStyleBackColor = true;
+            this.btrzy.Click += new System.EventHandler(this.btrzy_Click);
             // 
-            // button10
+            // bzero
             // 
-            this.button10.Location = new System.Drawing.Point(260, 393);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(42, 43);
-            this.button10.TabIndex = 9;
-            this.button10.Text = "0";
-            this.button10.UseVisualStyleBackColor = true;
+            this.bzero.Location = new System.Drawing.Point(260, 393);
+            this.bzero.Name = "bzero";
+            this.bzero.Size = new System.Drawing.Size(42, 43);
+            this.bzero.TabIndex = 9;
+            this.bzero.Text = "0";
+            this.bzero.UseVisualStyleBackColor = true;
+            this.bzero.Click += new System.EventHandler(this.bzero_Click);
             // 
-            // button11
+            // bprzecinek
             // 
-            this.button11.Location = new System.Drawing.Point(308, 393);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(42, 43);
-            this.button11.TabIndex = 10;
-            this.button11.Text = ",";
-            this.button11.UseVisualStyleBackColor = true;
+            this.bprzecinek.Location = new System.Drawing.Point(308, 393);
+            this.bprzecinek.Name = "bprzecinek";
+            this.bprzecinek.Size = new System.Drawing.Size(42, 43);
+            this.bprzecinek.TabIndex = 10;
+            this.bprzecinek.Text = ",";
+            this.bprzecinek.UseVisualStyleBackColor = true;
+            this.bprzecinek.Click += new System.EventHandler(this.bprzecinek_Click);
             // 
-            // reset
+            // breset
             // 
-            this.reset.Location = new System.Drawing.Point(260, 197);
-            this.reset.Name = "reset";
-            this.reset.Size = new System.Drawing.Size(42, 43);
-            this.reset.TabIndex = 11;
-            this.reset.Text = "R";
-            this.reset.UseVisualStyleBackColor = true;
+            this.breset.Location = new System.Drawing.Point(260, 197);
+            this.breset.Name = "breset";
+            this.breset.Size = new System.Drawing.Size(42, 43);
+            this.breset.TabIndex = 11;
+            this.breset.Text = "R";
+            this.breset.UseVisualStyleBackColor = true;
+            this.breset.Click += new System.EventHandler(this.breset_Click);
             // 
-            // button13
+            // bpotega
             // 
-            this.button13.Location = new System.Drawing.Point(308, 197);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(42, 43);
-            this.button13.TabIndex = 12;
-            this.button13.Text = "X²";
-            this.button13.UseVisualStyleBackColor = true;
+            this.bpotega.Location = new System.Drawing.Point(308, 197);
+            this.bpotega.Name = "bpotega";
+            this.bpotega.Size = new System.Drawing.Size(42, 43);
+            this.bpotega.TabIndex = 12;
+            this.bpotega.Text = "X²";
+            this.bpotega.UseVisualStyleBackColor = true;
+            this.bpotega.Click += new System.EventHandler(this.bpotega_Click);
             // 
-            // button14
+            // bpierwiastek
             // 
-            this.button14.Location = new System.Drawing.Point(357, 197);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(42, 43);
-            this.button14.TabIndex = 13;
-            this.button14.Text = "√";
-            this.button14.UseVisualStyleBackColor = true;
+            this.bpierwiastek.Location = new System.Drawing.Point(357, 197);
+            this.bpierwiastek.Name = "bpierwiastek";
+            this.bpierwiastek.Size = new System.Drawing.Size(42, 43);
+            this.bpierwiastek.TabIndex = 13;
+            this.bpierwiastek.Text = "√";
+            this.bpierwiastek.UseVisualStyleBackColor = true;
+            this.bpierwiastek.Click += new System.EventHandler(this.bpierwiastek_Click);
             // 
-            // button15
+            // bdzielenie
             // 
-            this.button15.Location = new System.Drawing.Point(405, 197);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(42, 43);
-            this.button15.TabIndex = 14;
-            this.button15.Text = "÷";
-            this.button15.UseVisualStyleBackColor = true;
+            this.bdzielenie.Location = new System.Drawing.Point(405, 197);
+            this.bdzielenie.Name = "bdzielenie";
+            this.bdzielenie.Size = new System.Drawing.Size(42, 43);
+            this.bdzielenie.TabIndex = 14;
+            this.bdzielenie.Text = "÷";
+            this.bdzielenie.UseVisualStyleBackColor = true;
+            this.bdzielenie.Click += new System.EventHandler(this.bdzielenie_Click);
             // 
-            // button16
+            // bmnozenie
             // 
-            this.button16.Location = new System.Drawing.Point(405, 246);
-            this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(42, 43);
-            this.button16.TabIndex = 15;
-            this.button16.Text = "X";
-            this.button16.UseVisualStyleBackColor = true;
+            this.bmnozenie.Location = new System.Drawing.Point(405, 246);
+            this.bmnozenie.Name = "bmnozenie";
+            this.bmnozenie.Size = new System.Drawing.Size(42, 43);
+            this.bmnozenie.TabIndex = 15;
+            this.bmnozenie.Text = "X";
+            this.bmnozenie.UseVisualStyleBackColor = true;
+            this.bmnozenie.Click += new System.EventHandler(this.bmnozenie_Click);
             // 
-            // button17
+            // bodejmowanie
             // 
-            this.button17.Location = new System.Drawing.Point(405, 295);
-            this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(42, 43);
-            this.button17.TabIndex = 16;
-            this.button17.Text = "-";
-            this.button17.UseVisualStyleBackColor = true;
+            this.bodejmowanie.Location = new System.Drawing.Point(405, 295);
+            this.bodejmowanie.Name = "bodejmowanie";
+            this.bodejmowanie.Size = new System.Drawing.Size(42, 43);
+            this.bodejmowanie.TabIndex = 16;
+            this.bodejmowanie.Text = "-";
+            this.bodejmowanie.UseVisualStyleBackColor = true;
+            this.bodejmowanie.Click += new System.EventHandler(this.bodejmowanie_Click);
             // 
-            // button18
+            // bdodawanie
             // 
-            this.button18.Location = new System.Drawing.Point(405, 344);
-            this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(42, 43);
-            this.button18.TabIndex = 17;
-            this.button18.Text = "+";
-            this.button18.UseVisualStyleBackColor = true;
+            this.bdodawanie.Location = new System.Drawing.Point(405, 344);
+            this.bdodawanie.Name = "bdodawanie";
+            this.bdodawanie.Size = new System.Drawing.Size(42, 43);
+            this.bdodawanie.TabIndex = 17;
+            this.bdodawanie.Text = "+";
+            this.bdodawanie.UseVisualStyleBackColor = true;
+            this.bdodawanie.Click += new System.EventHandler(this.bdodawanie_Click);
             // 
-            // button19
+            // bwynik
             // 
-            this.button19.Location = new System.Drawing.Point(357, 393);
-            this.button19.Name = "button19";
-            this.button19.Size = new System.Drawing.Size(90, 43);
-            this.button19.TabIndex = 18;
-            this.button19.Text = "=";
-            this.button19.UseVisualStyleBackColor = true;
+            this.bwynik.Location = new System.Drawing.Point(357, 393);
+            this.bwynik.Name = "bwynik";
+            this.bwynik.Size = new System.Drawing.Size(90, 43);
+            this.bwynik.TabIndex = 18;
+            this.bwynik.Text = "=";
+            this.bwynik.UseVisualStyleBackColor = true;
+            this.bwynik.Click += new System.EventHandler(this.bwynik_Click);
             // 
             // label1
             // 
@@ -236,8 +255,12 @@
             // 
             this.textBox1.Location = new System.Drawing.Point(60, 144);
             this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(611, 20);
             this.textBox1.TabIndex = 21;
+            this.textBox1.Text = "0";
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // Kalkulator
             // 
@@ -245,25 +268,25 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button19);
-            this.Controls.Add(this.button18);
-            this.Controls.Add(this.button17);
-            this.Controls.Add(this.button16);
-            this.Controls.Add(this.button15);
-            this.Controls.Add(this.button14);
-            this.Controls.Add(this.button13);
-            this.Controls.Add(this.reset);
-            this.Controls.Add(this.button11);
-            this.Controls.Add(this.button10);
-            this.Controls.Add(this.button9);
-            this.Controls.Add(this.button8);
-            this.Controls.Add(this.button7);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.bwynik);
+            this.Controls.Add(this.bdodawanie);
+            this.Controls.Add(this.bodejmowanie);
+            this.Controls.Add(this.bmnozenie);
+            this.Controls.Add(this.bdzielenie);
+            this.Controls.Add(this.bpierwiastek);
+            this.Controls.Add(this.bpotega);
+            this.Controls.Add(this.breset);
+            this.Controls.Add(this.bprzecinek);
+            this.Controls.Add(this.bzero);
+            this.Controls.Add(this.btrzy);
+            this.Controls.Add(this.bdwa);
+            this.Controls.Add(this.bjeden);
+            this.Controls.Add(this.bszesc);
+            this.Controls.Add(this.bpiec);
+            this.Controls.Add(this.bcztery);
+            this.Controls.Add(this.bdziewiec);
+            this.Controls.Add(this.bosiem);
+            this.Controls.Add(this.bsiedem);
             this.Name = "Kalkulator";
             this.Size = new System.Drawing.Size(722, 479);
             this.Load += new System.EventHandler(this.Kalkulator_Load);
@@ -274,25 +297,25 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Button reset;
-        private System.Windows.Forms.Button button13;
-        private System.Windows.Forms.Button button14;
-        private System.Windows.Forms.Button button15;
-        private System.Windows.Forms.Button button16;
-        private System.Windows.Forms.Button button17;
-        private System.Windows.Forms.Button button18;
-        private System.Windows.Forms.Button button19;
+        private System.Windows.Forms.Button bsiedem;
+        private System.Windows.Forms.Button bosiem;
+        private System.Windows.Forms.Button bdziewiec;
+        private System.Windows.Forms.Button bcztery;
+        private System.Windows.Forms.Button bpiec;
+        private System.Windows.Forms.Button bszesc;
+        private System.Windows.Forms.Button bjeden;
+        private System.Windows.Forms.Button bdwa;
+        private System.Windows.Forms.Button btrzy;
+        private System.Windows.Forms.Button bzero;
+        private System.Windows.Forms.Button bprzecinek;
+        private System.Windows.Forms.Button breset;
+        private System.Windows.Forms.Button bpotega;
+        private System.Windows.Forms.Button bpierwiastek;
+        private System.Windows.Forms.Button bdzielenie;
+        private System.Windows.Forms.Button bmnozenie;
+        private System.Windows.Forms.Button bodejmowanie;
+        private System.Windows.Forms.Button bdodawanie;
+        private System.Windows.Forms.Button bwynik;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox1;
     }
