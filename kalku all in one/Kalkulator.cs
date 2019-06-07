@@ -84,7 +84,7 @@ namespace kalku_all_in_one
 
         private void breset_Click(object sender, EventArgs e)
         {
-            textBox1.Text = "0";
+            textBox1.Clear();
             liczba1 = 0;
            
             operacja = null;
