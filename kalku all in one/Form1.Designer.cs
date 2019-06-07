@@ -33,9 +33,9 @@
             this.konwenterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.jednostkiIMiaryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.kalkulator1 = new kalku_all_in_one.Kalkulator();
             this.konwenter1 = new kalku_all_in_one.konwenter();
             this.jednostki__i_miary1 = new kalku_all_in_one.Jednostki__i_miary();
-            this.kalkulator1 = new kalku_all_in_one.Kalkulator();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -57,18 +57,21 @@
             this.kalkulatorToolStripMenuItem.Name = "kalkulatorToolStripMenuItem";
             this.kalkulatorToolStripMenuItem.Size = new System.Drawing.Size(72, 20);
             this.kalkulatorToolStripMenuItem.Text = "Kalkulator";
+            this.kalkulatorToolStripMenuItem.Click += new System.EventHandler(this.kalkulatorToolStripMenuItem_Click_1);
             // 
             // konwenterToolStripMenuItem
             // 
             this.konwenterToolStripMenuItem.Name = "konwenterToolStripMenuItem";
             this.konwenterToolStripMenuItem.Size = new System.Drawing.Size(76, 20);
             this.konwenterToolStripMenuItem.Text = "Konwenter";
+            this.konwenterToolStripMenuItem.Click += new System.EventHandler(this.konwenterToolStripMenuItem_Click_1);
             // 
             // jednostkiIMiaryToolStripMenuItem
             // 
             this.jednostkiIMiaryToolStripMenuItem.Name = "jednostkiIMiaryToolStripMenuItem";
             this.jednostkiIMiaryToolStripMenuItem.Size = new System.Drawing.Size(107, 20);
             this.jednostkiIMiaryToolStripMenuItem.Text = "Jednostki i Miary";
+            this.jednostkiIMiaryToolStripMenuItem.Click += new System.EventHandler(this.jednostkiIMiaryToolStripMenuItem_Click_1);
             // 
             // panel1
             // 
@@ -80,14 +83,19 @@
             this.panel1.Size = new System.Drawing.Size(722, 479);
             this.panel1.TabIndex = 1;
             // 
+            // kalkulator1
+            // 
+            this.kalkulator1.Location = new System.Drawing.Point(0, 0);
+            this.kalkulator1.Name = "kalkulator1";
+            this.kalkulator1.Size = new System.Drawing.Size(722, 479);
+            this.kalkulator1.TabIndex = 0;
+            // 
             // konwenter1
             // 
-            this.konwenter1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.konwenter1.Location = new System.Drawing.Point(0, 0);
             this.konwenter1.Name = "konwenter1";
-            this.konwenter1.Size = new System.Drawing.Size(722, 479);
+            this.konwenter1.Size = new System.Drawing.Size(775, 447);
             this.konwenter1.TabIndex = 1;
-            this.konwenter1.Load += new System.EventHandler(this.konwenter1_Load);
             // 
             // jednostki__i_miary1
             // 
@@ -96,15 +104,6 @@
             this.jednostki__i_miary1.Name = "jednostki__i_miary1";
             this.jednostki__i_miary1.Size = new System.Drawing.Size(722, 479);
             this.jednostki__i_miary1.TabIndex = 0;
-            // 
-            // kalkulator1
-            // 
-            this.kalkulator1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.kalkulator1.Location = new System.Drawing.Point(0, 0);
-            this.kalkulator1.Name = "kalkulator1";
-            this.kalkulator1.Size = new System.Drawing.Size(722, 479);
-            this.kalkulator1.TabIndex = 2;
-            this.kalkulator1.Load += new System.EventHandler(this.kalkulator1_Load);
             // 
             // Form1
             // 
@@ -118,6 +117,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "All in One";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.panel1.ResumeLayout(false);

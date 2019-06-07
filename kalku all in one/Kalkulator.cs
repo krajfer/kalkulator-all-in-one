@@ -12,9 +12,9 @@ namespace kalku_all_in_one
 {
     public partial class Kalkulator : UserControl
     {
-        decimal liczba1, liczba2;
+        double liczba1;
         string operacja;
-
+        bool operacjazrobiona=false;
 
         public Kalkulator()
         {
@@ -23,11 +23,12 @@ namespace kalku_all_in_one
 
         private void label2_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void bpiec_Click(object sender, EventArgs e)
         {
+            operacjazrobiona = false;
             if (textBox1.Text == "0" && textBox1.Text != null)
             {
                 textBox1.Text = "5";
@@ -36,28 +37,39 @@ namespace kalku_all_in_one
             {
                 textBox1.Text = textBox1.Text + "5";
             }
+
         }
 
         private void bdodawanie_Click(object sender, EventArgs e)
         {
-            liczba1 = decimal.Parse(textBox1.Text);
-            operacja =  "+";
-            textBox1.Text =  textBox1.Text + "+";
+           
+            operacja = "+";
+            textBox1.Text = textBox1.Text + "+";
+            operacjazrobiona = true;
         }
 
         private void bodejmowanie_Click(object sender, EventArgs e)
         {
-
+           
+            operacja = "-";
+            textBox1.Text = textBox1.Text + "-";
+            operacjazrobiona = true;
         }
 
         private void bmnozenie_Click(object sender, EventArgs e)
         {
-
+            
+            operacja = "*";
+            textBox1.Text = textBox1.Text + "*";
+            operacjazrobiona = true;
         }
 
         private void bdzielenie_Click(object sender, EventArgs e)
         {
             
+            operacja = "/";
+            textBox1.Text = textBox1.Text + "/";
+            operacjazrobiona = true;
         }
 
         private void bpierwiastek_Click(object sender, EventArgs e)
@@ -67,25 +79,30 @@ namespace kalku_all_in_one
 
         private void bpotega_Click(object sender, EventArgs e)
         {
-            textBox1.Text = (Math.Exp(double.Parse(textBox1.Text))).ToString();
+            textBox1.Text = (liczba1 * liczba1).ToString();
         }
 
         private void breset_Click(object sender, EventArgs e)
         {
             textBox1.Text = "0";
+            liczba1 = 0;
+           
+            operacja = null;
         }
 
         private void bprzecinek_Click(object sender, EventArgs e)
         {
-           
+
             {
                 textBox1.Text = textBox1.Text + ",";
             }
+            operacjazrobiona = true;
         }
 
         private void bzero_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text == "0" && textBox1.Text != null)
+            operacjazrobiona = false;
+            if (textBox1.Text == "0" )
             {
                 textBox1.Text = "0";
             }
@@ -97,7 +114,8 @@ namespace kalku_all_in_one
 
         private void btrzy_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text == "0" && textBox1.Text != null)
+            operacjazrobiona = false;
+            if (textBox1.Text == "0")
             {
                 textBox1.Text = "3";
             }
@@ -109,7 +127,8 @@ namespace kalku_all_in_one
 
         private void bdwa_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text == "0" && textBox1.Text != null)
+            operacjazrobiona = false;
+            if (textBox1.Text == "0" )
             {
                 textBox1.Text = "2";
             }
@@ -121,6 +140,7 @@ namespace kalku_all_in_one
 
         private void bjeden_Click(object sender, EventArgs e)
         {
+            operacjazrobiona = false;
             if (textBox1.Text == "0" && textBox1.Text != null)
             {
                 textBox1.Text = "1";
@@ -133,6 +153,7 @@ namespace kalku_all_in_one
 
         private void bszesc_Click(object sender, EventArgs e)
         {
+            operacjazrobiona = false;
             if (textBox1.Text == "0" && textBox1.Text != null)
             {
                 textBox1.Text = "6";
@@ -143,13 +164,11 @@ namespace kalku_all_in_one
             }
         }
 
-        private void bwynik_Click(object sender, EventArgs e)
-        {
 
-        }
 
         private void bcztery_Click(object sender, EventArgs e)
         {
+            operacjazrobiona = false;
             if (textBox1.Text == "0" && textBox1.Text != null)
             {
                 textBox1.Text = "4";
@@ -162,6 +181,7 @@ namespace kalku_all_in_one
 
         private void bdziewiec_Click(object sender, EventArgs e)
         {
+            operacjazrobiona = false;
             if (textBox1.Text == "0" && textBox1.Text != null)
             {
                 textBox1.Text = "9";
@@ -174,6 +194,7 @@ namespace kalku_all_in_one
 
         private void bosiem_Click(object sender, EventArgs e)
         {
+            operacjazrobiona = false;
             if (textBox1.Text == "0" && textBox1.Text != null)
             {
                 textBox1.Text = "8";
@@ -186,6 +207,7 @@ namespace kalku_all_in_one
 
         private void bsiedem_Click(object sender, EventArgs e)
         {
+            operacjazrobiona = false;
             if (textBox1.Text == "0" && textBox1.Text != null)
             {
                 textBox1.Text = "7";
@@ -204,6 +226,31 @@ namespace kalku_all_in_one
         private void Kalkulator_Load(object sender, EventArgs e)
         {
 
+        }
+        private void bwynik_Click(object sender, EventArgs e)
+        {
+            double liczba2=0;
+            double wynik;
+
+           // liczba2 = decimal.Parse(textBox1.Text);
+            switch (operacja)
+            {
+  
+                case "+":
+                    textBox1.Text=(wynik = (liczba1 - liczba2)).ToString(); 
+                    break;
+                case "-":
+                    textBox1.Text = (wynik= (liczba1 - liczba2)).ToString();
+                    break;
+                case "*":
+                    textBox1.Text = (wynik = (liczba1 * liczba2)).ToString();
+                    break;
+                case "/":
+                    textBox1.Text = (wynik = (liczba1 / liczba2)).ToString();
+                    break;
+                default:
+                    break;
+            }
         }
     }
 }

@@ -15,16 +15,58 @@ namespace kalku_all_in_one
         public Form1()
         {
             InitializeComponent();
+            
+        }
+        private void Form1_Load(object sender, EventArgs e)
+        { 
+            kalkulator1.Hide();
+            jednostki__i_miary1.Hide();
+            konwenter1.Hide();
         }
 
-        private void kalkulator1_Load(object sender, EventArgs e)
+   
+
+        private void kalkulatorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void konwenterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void jednostkiIMiaryToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void konwenter1_Load(object sender, EventArgs e)
+        private void kalkulatorToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            jednostki__i_miary1.Hide();
+            konwenter1.Hide();
+
+            kalkulator1.Show();
+            kalkulator1.BringToFront();
+        }
+
+        private void konwenterToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            kalkulator1.Hide();
+            jednostki__i_miary1.Hide();
+
+            konwenter1.Show();
+            konwenter1.BringToFront();
+        }
+
+        private void jednostkiIMiaryToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
 
+            kalkulator1.Hide();
+            konwenter1.Hide();
+
+            jednostki__i_miary1.Show();
+            jednostki__i_miary1.BringToFront();
         }
     }
 }

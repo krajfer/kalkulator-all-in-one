@@ -24,5 +24,10 @@ namespace kalku_all_in_one
             dojakiej = comboBox2.SelectedItem.ToString();
             webBrowser1.Navigate( "https://www.google.com/search?q="+ilosc+" "+zjakiej+"na+"+dojakiej+"&oq="+ilosc+" "+zjakiej+ "na+" + dojakiej);
         }
+
+        private void webBrowser1_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
+        {
+
+        }
     }
 }
