@@ -12,64 +12,94 @@ namespace kalku_all_in_one
 {
     public partial class Kalkulator : UserControl
     {
-        double liczba1;
-        string operacja;
-        bool operacjazrobiona=false;
 
+        Double wynik = 0;
+        String operacja = "";
+        bool operacja_wykonana=false;
         public Kalkulator()
         {
             InitializeComponent();
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void pobieranieznakow(object sender, EventArgs e)   
         {
+            if ((textBox1.Text == "0") || (operacja_wykonana)) //jesli przy pobieraniu znaku textBox1 == 0 
+                textBox1.Clear();       //czysci textbox1 słuzyc ma to temu by na początku przy wpisywaniu liczby nie wyswietlało zera
 
+            Button z = (Button)sender;//pobieranie znaku z buttona
+           // textBox1.Text = textBox1.Text + z.Text;//do textBox1 wpisywane bedą ciągiem liczby z wcisnietyh buttonow
+            if (z.Text == ",")
+            {
+                if (!textBox1.Text.Contains("."))
+                    textBox1.Text = textBox1.Text + z.Text;
+
+            }
+            else
+                textBox1.Text = textBox1.Text + z.Text;
         }
 
-        private void bpiec_Click(object sender, EventArgs e)
+
+        private void dzialanie(object sender, EventArgs e)
         {
-            operacjazrobiona = false;
-            if (textBox1.Text == "0" && textBox1.Text != null)
+            Button z = (Button)sender;//pobieranie znaku z buttona
+           // operacja = z.Text;//przechowywanie operacji w zmiennej
+         //   wynik = Double.Parse(textBox1.Text);//Konwertowanie wartosci textowej do doubla
+           // operacja_wykonana = true;
+            if (wynik != 0)
             {
-                textBox1.Text = "5";
+                bwynik.PerformClick();
+                operacja = z.Text;
+                aktualnie.Text = wynik + " " + operacja;
+                operacja_wykonana = true;
             }
             else
             {
-                textBox1.Text = textBox1.Text + "5";
+
+                operacja = z.Text;
+                wynik = Double.Parse(textBox1.Text);
+                aktualnie.Text = wynik + " " + operacja;
+                operacja_wykonana = true;
             }
-
-        }
-
-        private void bdodawanie_Click(object sender, EventArgs e)
-        {
-           
-            operacja = "+";
-            textBox1.Text = textBox1.Text + "+";
-            operacjazrobiona = true;
-        }
-
-        private void bodejmowanie_Click(object sender, EventArgs e)
-        {
-           
-            operacja = "-";
-            textBox1.Text = textBox1.Text + "-";
-            operacjazrobiona = true;
-        }
-
-        private void bmnozenie_Click(object sender, EventArgs e)
-        {
             
-            operacja = "*";
-            textBox1.Text = textBox1.Text + "*";
-            operacjazrobiona = true;
         }
 
-        private void bdzielenie_Click(object sender, EventArgs e)
+        private void bwynik_Click(object sender, EventArgs e)
         {
-            
-            operacja = "/";
-            textBox1.Text = textBox1.Text + "/";
-            operacjazrobiona = true;
+            switch (operacja)
+            {
+                case "+":
+                    textBox1.Text = (wynik + Double.Parse(textBox1.Text)).ToString();
+                    break;
+                case "-":
+                    textBox1.Text = (wynik - Double.Parse(textBox1.Text)).ToString();
+                    break;
+                case "*":
+                    textBox1.Text = (wynik * Double.Parse(textBox1.Text)).ToString();
+                    break;
+                case "/":
+                    textBox1.Text = (wynik / Double.Parse(textBox1.Text)).ToString();
+                    break;
+                case "^":
+                    textBox1.Text = (Math.Pow(wynik, Double.Parse(textBox1.Text))).ToString();
+                    break;
+                default:
+                    break;
+            }
+           
+            operacja_wykonana = false;
+
+        }
+
+        private void Kalkulator_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void breset_Click(object sender, EventArgs e)
+        {
+            textBox1.Clear();
+            textBox1.Text = "0";
+            wynik = 0;
         }
 
         private void bpierwiastek_Click(object sender, EventArgs e)
@@ -79,178 +109,27 @@ namespace kalku_all_in_one
 
         private void bpotega_Click(object sender, EventArgs e)
         {
-            textBox1.Text = (liczba1 * liczba1).ToString();
+            textBox1.Text = (Math.Pow(double.Parse(textBox1.Text),2)).ToString();
         }
 
-        private void breset_Click(object sender, EventArgs e)
+        private void sin_Click(object sender, EventArgs e)
         {
-            textBox1.Clear();
-            liczba1 = 0;
-           
-            operacja = null;
+            textBox1.Text = (Math.Sin(double.Parse(textBox1.Text))).ToString();
         }
 
-        private void bprzecinek_Click(object sender, EventArgs e)
+        private void cos_Click(object sender, EventArgs e)
         {
-
-            {
-                textBox1.Text = textBox1.Text + ",";
-            }
-            operacjazrobiona = true;
+            textBox1.Text = (Math.Sin(double.Parse(textBox1.Text))).ToString();
         }
 
-        private void bzero_Click(object sender, EventArgs e)
+        private void tg_Click(object sender, EventArgs e)
         {
-            operacjazrobiona = false;
-            if (textBox1.Text == "0" )
-            {
-                textBox1.Text = "0";
-            }
-            else
-            {
-                textBox1.Text = textBox1.Text + "0";
-            }
+            textBox1.Text = (Math.Tan(double.Parse(textBox1.Text))).ToString();
         }
 
-        private void btrzy_Click(object sender, EventArgs e)
+        private void potega3_Click(object sender, EventArgs e)
         {
-            operacjazrobiona = false;
-            if (textBox1.Text == "0")
-            {
-                textBox1.Text = "3";
-            }
-            else
-            {
-                textBox1.Text = textBox1.Text + "3";
-            }
-        }
-
-        private void bdwa_Click(object sender, EventArgs e)
-        {
-            operacjazrobiona = false;
-            if (textBox1.Text == "0" )
-            {
-                textBox1.Text = "2";
-            }
-            else
-            {
-                textBox1.Text = textBox1.Text + "2";
-            }
-        }
-
-        private void bjeden_Click(object sender, EventArgs e)
-        {
-            operacjazrobiona = false;
-            if (textBox1.Text == "0" && textBox1.Text != null)
-            {
-                textBox1.Text = "1";
-            }
-            else
-            {
-                textBox1.Text = textBox1.Text + "1";
-            }
-        }
-
-        private void bszesc_Click(object sender, EventArgs e)
-        {
-            operacjazrobiona = false;
-            if (textBox1.Text == "0" && textBox1.Text != null)
-            {
-                textBox1.Text = "6";
-            }
-            else
-            {
-                textBox1.Text = textBox1.Text + "6";
-            }
-        }
-
-
-
-        private void bcztery_Click(object sender, EventArgs e)
-        {
-            operacjazrobiona = false;
-            if (textBox1.Text == "0" && textBox1.Text != null)
-            {
-                textBox1.Text = "4";
-            }
-            else
-            {
-                textBox1.Text = textBox1.Text + "4";
-            }
-        }
-
-        private void bdziewiec_Click(object sender, EventArgs e)
-        {
-            operacjazrobiona = false;
-            if (textBox1.Text == "0" && textBox1.Text != null)
-            {
-                textBox1.Text = "9";
-            }
-            else
-            {
-                textBox1.Text = textBox1.Text + "9";
-            }
-        }
-
-        private void bosiem_Click(object sender, EventArgs e)
-        {
-            operacjazrobiona = false;
-            if (textBox1.Text == "0" && textBox1.Text != null)
-            {
-                textBox1.Text = "8";
-            }
-            else
-            {
-                textBox1.Text = textBox1.Text + "8";
-            }
-        }
-
-        private void bsiedem_Click(object sender, EventArgs e)
-        {
-            operacjazrobiona = false;
-            if (textBox1.Text == "0" && textBox1.Text != null)
-            {
-                textBox1.Text = "7";
-            }
-            else
-            {
-                textBox1.Text = textBox1.Text + "7";
-            }
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Kalkulator_Load(object sender, EventArgs e)
-        {
-
-        }
-        private void bwynik_Click(object sender, EventArgs e)
-        {
-            double liczba2=0;
-            double wynik;
-
-           // liczba2 = decimal.Parse(textBox1.Text);
-            switch (operacja)
-            {
-  
-                case "+":
-                    textBox1.Text=(wynik = (liczba1 - liczba2)).ToString(); 
-                    break;
-                case "-":
-                    textBox1.Text = (wynik= (liczba1 - liczba2)).ToString();
-                    break;
-                case "*":
-                    textBox1.Text = (wynik = (liczba1 * liczba2)).ToString();
-                    break;
-                case "/":
-                    textBox1.Text = (wynik = (liczba1 / liczba2)).ToString();
-                    break;
-                default:
-                    break;
-            }
+            textBox1.Text = (Math.Pow(double.Parse(textBox1.Text), 3)).ToString();
         }
     }
 }

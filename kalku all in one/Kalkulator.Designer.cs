@@ -49,6 +49,12 @@
             this.bwynik = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.aktualnie = new System.Windows.Forms.Label();
+            this.tg = new System.Windows.Forms.Button();
+            this.sin = new System.Windows.Forms.Button();
+            this.cos = new System.Windows.Forms.Button();
+            this.potega3 = new System.Windows.Forms.Button();
+            this.bpotegad = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // bsiedem
@@ -59,7 +65,7 @@
             this.bsiedem.TabIndex = 0;
             this.bsiedem.Text = "7";
             this.bsiedem.UseVisualStyleBackColor = true;
-            this.bsiedem.Click += new System.EventHandler(this.bsiedem_Click);
+            this.bsiedem.Click += new System.EventHandler(this.pobieranieznakow);
             // 
             // bosiem
             // 
@@ -69,7 +75,7 @@
             this.bosiem.TabIndex = 1;
             this.bosiem.Text = "8";
             this.bosiem.UseVisualStyleBackColor = true;
-            this.bosiem.Click += new System.EventHandler(this.bosiem_Click);
+            this.bosiem.Click += new System.EventHandler(this.pobieranieznakow);
             // 
             // bdziewiec
             // 
@@ -79,7 +85,7 @@
             this.bdziewiec.TabIndex = 2;
             this.bdziewiec.Text = "9";
             this.bdziewiec.UseVisualStyleBackColor = true;
-            this.bdziewiec.Click += new System.EventHandler(this.bdziewiec_Click);
+            this.bdziewiec.Click += new System.EventHandler(this.pobieranieznakow);
             // 
             // bcztery
             // 
@@ -89,7 +95,7 @@
             this.bcztery.TabIndex = 3;
             this.bcztery.Text = "4";
             this.bcztery.UseVisualStyleBackColor = true;
-            this.bcztery.Click += new System.EventHandler(this.bcztery_Click);
+            this.bcztery.Click += new System.EventHandler(this.pobieranieznakow);
             // 
             // bpiec
             // 
@@ -99,7 +105,7 @@
             this.bpiec.TabIndex = 4;
             this.bpiec.Text = "5";
             this.bpiec.UseVisualStyleBackColor = true;
-            this.bpiec.Click += new System.EventHandler(this.bpiec_Click);
+            this.bpiec.Click += new System.EventHandler(this.pobieranieznakow);
             // 
             // bszesc
             // 
@@ -109,7 +115,7 @@
             this.bszesc.TabIndex = 5;
             this.bszesc.Text = "6";
             this.bszesc.UseVisualStyleBackColor = true;
-            this.bszesc.Click += new System.EventHandler(this.bszesc_Click);
+            this.bszesc.Click += new System.EventHandler(this.pobieranieznakow);
             // 
             // bjeden
             // 
@@ -119,7 +125,7 @@
             this.bjeden.TabIndex = 6;
             this.bjeden.Text = "1";
             this.bjeden.UseVisualStyleBackColor = true;
-            this.bjeden.Click += new System.EventHandler(this.bjeden_Click);
+            this.bjeden.Click += new System.EventHandler(this.pobieranieznakow);
             // 
             // bdwa
             // 
@@ -129,7 +135,7 @@
             this.bdwa.TabIndex = 7;
             this.bdwa.Text = "2";
             this.bdwa.UseVisualStyleBackColor = true;
-            this.bdwa.Click += new System.EventHandler(this.bdwa_Click);
+            this.bdwa.Click += new System.EventHandler(this.pobieranieznakow);
             // 
             // btrzy
             // 
@@ -139,7 +145,7 @@
             this.btrzy.TabIndex = 8;
             this.btrzy.Text = "3";
             this.btrzy.UseVisualStyleBackColor = true;
-            this.btrzy.Click += new System.EventHandler(this.btrzy_Click);
+            this.btrzy.Click += new System.EventHandler(this.pobieranieznakow);
             // 
             // bzero
             // 
@@ -149,7 +155,7 @@
             this.bzero.TabIndex = 9;
             this.bzero.Text = "0";
             this.bzero.UseVisualStyleBackColor = true;
-            this.bzero.Click += new System.EventHandler(this.bzero_Click);
+            this.bzero.Click += new System.EventHandler(this.pobieranieznakow);
             // 
             // bprzecinek
             // 
@@ -159,7 +165,7 @@
             this.bprzecinek.TabIndex = 10;
             this.bprzecinek.Text = ",";
             this.bprzecinek.UseVisualStyleBackColor = true;
-            this.bprzecinek.Click += new System.EventHandler(this.bprzecinek_Click);
+            this.bprzecinek.Click += new System.EventHandler(this.pobieranieznakow);
             // 
             // breset
             // 
@@ -199,7 +205,7 @@
             this.bdzielenie.TabIndex = 14;
             this.bdzielenie.Text = "÷";
             this.bdzielenie.UseVisualStyleBackColor = true;
-            this.bdzielenie.Click += new System.EventHandler(this.bdzielenie_Click);
+            this.bdzielenie.Click += new System.EventHandler(this.dzialanie);
             // 
             // bmnozenie
             // 
@@ -209,7 +215,7 @@
             this.bmnozenie.TabIndex = 15;
             this.bmnozenie.Text = "X";
             this.bmnozenie.UseVisualStyleBackColor = true;
-            this.bmnozenie.Click += new System.EventHandler(this.bmnozenie_Click);
+            this.bmnozenie.Click += new System.EventHandler(this.dzialanie);
             // 
             // bodejmowanie
             // 
@@ -219,7 +225,7 @@
             this.bodejmowanie.TabIndex = 16;
             this.bodejmowanie.Text = "-";
             this.bodejmowanie.UseVisualStyleBackColor = true;
-            this.bodejmowanie.Click += new System.EventHandler(this.bodejmowanie_Click);
+            this.bodejmowanie.Click += new System.EventHandler(this.dzialanie);
             // 
             // bdodawanie
             // 
@@ -229,7 +235,7 @@
             this.bdodawanie.TabIndex = 17;
             this.bdodawanie.Text = "+";
             this.bdodawanie.UseVisualStyleBackColor = true;
-            this.bdodawanie.Click += new System.EventHandler(this.bdodawanie_Click);
+            this.bdodawanie.Click += new System.EventHandler(this.dzialanie);
             // 
             // bwynik
             // 
@@ -253,18 +259,81 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(60, 144);
+            this.textBox1.Location = new System.Drawing.Point(62, 144);
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(611, 20);
             this.textBox1.TabIndex = 21;
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // aktualnie
+            // 
+            this.aktualnie.AutoSize = true;
+            this.aktualnie.Location = new System.Drawing.Point(97, 115);
+            this.aktualnie.Name = "aktualnie";
+            this.aktualnie.Size = new System.Drawing.Size(0, 13);
+            this.aktualnie.TabIndex = 22;
+            // 
+            // tg
+            // 
+            this.tg.Location = new System.Drawing.Point(453, 295);
+            this.tg.Name = "tg";
+            this.tg.Size = new System.Drawing.Size(42, 43);
+            this.tg.TabIndex = 23;
+            this.tg.Text = "tg";
+            this.tg.UseVisualStyleBackColor = true;
+            this.tg.Click += new System.EventHandler(this.tg_Click);
+            // 
+            // sin
+            // 
+            this.sin.Location = new System.Drawing.Point(453, 197);
+            this.sin.Name = "sin";
+            this.sin.Size = new System.Drawing.Size(42, 43);
+            this.sin.TabIndex = 23;
+            this.sin.Text = "sin";
+            this.sin.UseVisualStyleBackColor = true;
+            this.sin.Click += new System.EventHandler(this.sin_Click);
+            // 
+            // cos
+            // 
+            this.cos.Location = new System.Drawing.Point(453, 246);
+            this.cos.Name = "cos";
+            this.cos.Size = new System.Drawing.Size(42, 43);
+            this.cos.TabIndex = 24;
+            this.cos.Text = "cos";
+            this.cos.UseVisualStyleBackColor = true;
+            this.cos.Click += new System.EventHandler(this.cos_Click);
+            // 
+            // potega3
+            // 
+            this.potega3.Location = new System.Drawing.Point(453, 344);
+            this.potega3.Name = "potega3";
+            this.potega3.Size = new System.Drawing.Size(42, 43);
+            this.potega3.TabIndex = 25;
+            this.potega3.Text = "X³";
+            this.potega3.UseVisualStyleBackColor = true;
+            this.potega3.Click += new System.EventHandler(this.potega3_Click);
+            // 
+            // bpotegad
+            // 
+            this.bpotegad.Location = new System.Drawing.Point(453, 393);
+            this.bpotegad.Name = "bpotegad";
+            this.bpotegad.Size = new System.Drawing.Size(42, 43);
+            this.bpotegad.TabIndex = 26;
+            this.bpotegad.Text = "^";
+            this.bpotegad.UseVisualStyleBackColor = true;
+            this.bpotegad.Click += new System.EventHandler(this.dzialanie);
             // 
             // Kalkulator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.bpotegad);
+            this.Controls.Add(this.potega3);
+            this.Controls.Add(this.cos);
+            this.Controls.Add(this.sin);
+            this.Controls.Add(this.tg);
+            this.Controls.Add(this.aktualnie);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.bwynik);
@@ -317,5 +386,11 @@
         private System.Windows.Forms.Button bwynik;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label aktualnie;
+        private System.Windows.Forms.Button tg;
+        private System.Windows.Forms.Button sin;
+        private System.Windows.Forms.Button cos;
+        private System.Windows.Forms.Button potega3;
+        private System.Windows.Forms.Button bpotegad;
     }
 }
