@@ -36,6 +36,7 @@
             this.kalkulator1 = new kalku_all_in_one.Kalkulator();
             this.konwenter1 = new kalku_all_in_one.konwenter();
             this.jednostki__i_miary1 = new kalku_all_in_one.Jednostki__i_miary();
+            this.wyjscieToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -45,7 +46,8 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.kalkulatorToolStripMenuItem,
             this.konwenterToolStripMenuItem,
-            this.jednostkiIMiaryToolStripMenuItem});
+            this.jednostkiIMiaryToolStripMenuItem,
+            this.wyjscieToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(724, 24);
@@ -89,6 +91,7 @@
             this.kalkulator1.Name = "kalkulator1";
             this.kalkulator1.Size = new System.Drawing.Size(722, 479);
             this.kalkulator1.TabIndex = 0;
+            this.kalkulator1.Load += new System.EventHandler(this.kalkulator1_Load);
             // 
             // konwenter1
             // 
@@ -105,17 +108,27 @@
             this.jednostki__i_miary1.Size = new System.Drawing.Size(722, 479);
             this.jednostki__i_miary1.TabIndex = 0;
             // 
+            // wyjscieToolStripMenuItem
+            // 
+            this.wyjscieToolStripMenuItem.Name = "wyjscieToolStripMenuItem";
+            this.wyjscieToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
+            this.wyjscieToolStripMenuItem.Text = "Wyjscie";
+            this.wyjscieToolStripMenuItem.Click += new System.EventHandler(this.wyjscieToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
+            this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(724, 516);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);
             this.Cursor = System.Windows.Forms.Cursors.Default;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
+            this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.Text = "All in One";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
@@ -136,6 +149,7 @@
         private Kalkulator kalkulator1;
         private konwenter konwenter1;
         private Jednostki__i_miary jednostki__i_miary1;
+        private System.Windows.Forms.ToolStripMenuItem wyjscieToolStripMenuItem;
     }
 }
 

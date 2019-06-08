@@ -68,5 +68,15 @@ namespace kalku_all_in_one
             jednostki__i_miary1.Show();
             jednostki__i_miary1.BringToFront();
         }
+
+        private void kalkulator1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void wyjscieToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

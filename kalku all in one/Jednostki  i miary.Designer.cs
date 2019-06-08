@@ -29,13 +29,12 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.wynikjednostek = new System.Windows.Forms.Label();
-            this.wynikmiar = new System.Windows.Forms.Label();
+            this.wynikjednostek1 = new System.Windows.Forms.Label();
+            this.wynikmiar1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -43,6 +42,10 @@
             this.label6 = new System.Windows.Forms.Label();
             this.jednostki = new System.Windows.Forms.Button();
             this.miary = new System.Windows.Forms.Button();
+            this.ilosc = new System.Windows.Forms.NumericUpDown();
+            this.wynikmiar = new System.Windows.Forms.TextBox();
+            this.wynikjednostek = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.ilosc)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -54,13 +57,6 @@
             this.label1.Size = new System.Drawing.Size(492, 57);
             this.label1.TabIndex = 0;
             this.label1.Text = "Jednostki i Miary";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(275, 154);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 1;
             // 
             // comboBox1
             // 
@@ -76,6 +72,7 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 2;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // comboBox3
             // 
@@ -86,10 +83,7 @@
             "dm",
             "metry",
             "km",
-            "mile ",
-            "mile morskie",
-            "yardy",
-            "Li"});
+            "mile"});
             this.comboBox3.Location = new System.Drawing.Point(486, 154);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(121, 21);
@@ -104,10 +98,7 @@
             "dm",
             "metry",
             "km",
-            "mile ",
-            "mile morskie",
-            "yardy",
-            "Li"});
+            "mile"});
             this.comboBox4.Location = new System.Drawing.Point(486, 231);
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(121, 21);
@@ -127,25 +118,26 @@
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(121, 21);
             this.comboBox2.TabIndex = 6;
+            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
-            // wynikjednostek
+            // wynikjednostek1
             // 
-            this.wynikjednostek.AutoSize = true;
-            this.wynikjednostek.Location = new System.Drawing.Point(73, 338);
-            this.wynikjednostek.Name = "wynikjednostek";
-            this.wynikjednostek.Size = new System.Drawing.Size(35, 13);
-            this.wynikjednostek.TabIndex = 7;
-            this.wynikjednostek.Text = "label2";
-            this.wynikjednostek.Click += new System.EventHandler(this.wynikjednostek_Click);
+            this.wynikjednostek1.AutoSize = true;
+            this.wynikjednostek1.Location = new System.Drawing.Point(12, 358);
+            this.wynikjednostek1.Name = "wynikjednostek1";
+            this.wynikjednostek1.Size = new System.Drawing.Size(83, 13);
+            this.wynikjednostek1.TabIndex = 7;
+            this.wynikjednostek1.Text = "wynik jednostek";
+            this.wynikjednostek1.Click += new System.EventHandler(this.wynikjednostek_Click);
             // 
-            // wynikmiar
+            // wynikmiar1
             // 
-            this.wynikmiar.AutoSize = true;
-            this.wynikmiar.Location = new System.Drawing.Point(486, 337);
-            this.wynikmiar.Name = "wynikmiar";
-            this.wynikmiar.Size = new System.Drawing.Size(35, 13);
-            this.wynikmiar.TabIndex = 8;
-            this.wynikmiar.Text = "label3";
+            this.wynikmiar1.AutoSize = true;
+            this.wynikmiar1.Location = new System.Drawing.Point(368, 358);
+            this.wynikmiar1.Name = "wynikmiar1";
+            this.wynikmiar1.Size = new System.Drawing.Size(56, 13);
+            this.wynikmiar1.TabIndex = 17;
+            this.wynikmiar1.Text = "wynik miar";
             // 
             // label2
             // 
@@ -210,11 +202,45 @@
             this.miary.TabIndex = 15;
             this.miary.Text = "Oblicz";
             this.miary.UseVisualStyleBackColor = true;
+            this.miary.Click += new System.EventHandler(this.miary_Click);
+            // 
+            // ilosc
+            // 
+            this.ilosc.Location = new System.Drawing.Point(276, 154);
+            this.ilosc.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.ilosc.Name = "ilosc";
+            this.ilosc.Size = new System.Drawing.Size(120, 20);
+            this.ilosc.TabIndex = 16;
+            // 
+            // wynikmiar
+            // 
+            this.wynikmiar.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.wynikmiar.Location = new System.Drawing.Point(430, 355);
+            this.wynikmiar.Name = "wynikmiar";
+            this.wynikmiar.ReadOnly = true;
+            this.wynikmiar.Size = new System.Drawing.Size(219, 20);
+            this.wynikmiar.TabIndex = 30;
+            // 
+            // wynikjednostek
+            // 
+            this.wynikjednostek.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.wynikjednostek.Location = new System.Drawing.Point(101, 355);
+            this.wynikjednostek.Name = "wynikjednostek";
+            this.wynikjednostek.ReadOnly = true;
+            this.wynikjednostek.Size = new System.Drawing.Size(187, 20);
+            this.wynikjednostek.TabIndex = 31;
             // 
             // Jednostki__i_miary
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.wynikjednostek);
+            this.Controls.Add(this.wynikmiar);
+            this.Controls.Add(this.ilosc);
             this.Controls.Add(this.miary);
             this.Controls.Add(this.jednostki);
             this.Controls.Add(this.label6);
@@ -222,16 +248,16 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.wynikmiar);
-            this.Controls.Add(this.wynikjednostek);
+            this.Controls.Add(this.wynikmiar1);
+            this.Controls.Add(this.wynikjednostek1);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.comboBox4);
             this.Controls.Add(this.comboBox3);
             this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Name = "Jednostki__i_miary";
             this.Size = new System.Drawing.Size(722, 479);
+            ((System.ComponentModel.ISupportInitialize)(this.ilosc)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -240,13 +266,12 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.ComboBox comboBox4;
         private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.Label wynikjednostek;
-        private System.Windows.Forms.Label wynikmiar;
+        private System.Windows.Forms.Label wynikjednostek1;
+        private System.Windows.Forms.Label wynikmiar1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
@@ -254,5 +279,8 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button jednostki;
         private System.Windows.Forms.Button miary;
+        private System.Windows.Forms.NumericUpDown ilosc;
+        private System.Windows.Forms.TextBox wynikmiar;
+        private System.Windows.Forms.TextBox wynikjednostek;
     }
 }

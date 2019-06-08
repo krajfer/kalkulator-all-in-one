@@ -27,24 +27,24 @@ namespace kalku_all_in_one
                 textBox1.Clear();       //czysci textbox1 słuzyc ma to temu by na początku przy wpisywaniu liczby nie wyswietlało zera
 
             Button z = (Button)sender;//pobieranie znaku z buttona
-           // textBox1.Text = textBox1.Text + z.Text;//do textBox1 wpisywane bedą ciągiem liczby z wcisnietyh buttonow
+            
             if (z.Text == ",")
             {
-                if (!textBox1.Text.Contains("."))
+                if (!textBox1.Text.Contains(","))
                     textBox1.Text = textBox1.Text + z.Text;
 
             }
             else
-                textBox1.Text = textBox1.Text + z.Text;
+                textBox1.Text = textBox1.Text + z.Text;//do textBox1 wpisywane bedą ciągiem liczby z wcisnietyh buttonow
         }
 
 
         private void dzialanie(object sender, EventArgs e)
         {
-            Button z = (Button)sender;//pobieranie znaku z buttona
-           // operacja = z.Text;//przechowywanie operacji w zmiennej
-         //   wynik = Double.Parse(textBox1.Text);//Konwertowanie wartosci textowej do doubla
-           // operacja_wykonana = true;
+            Button z = (Button)sender; //pobieranie znaku z buttona
+          
+         
+        
             if (wynik != 0)
             {
                 bwynik.PerformClick();
@@ -78,7 +78,7 @@ namespace kalku_all_in_one
                     break;
                 case "/":
                     textBox1.Text = (wynik / Double.Parse(textBox1.Text)).ToString();
-                    break;
+                    break;                 
                 case "^":
                     textBox1.Text = (Math.Pow(wynik, Double.Parse(textBox1.Text))).ToString();
                     break;
@@ -130,6 +130,24 @@ namespace kalku_all_in_one
         private void potega3_Click(object sender, EventArgs e)
         {
             textBox1.Text = (Math.Pow(double.Parse(textBox1.Text), 3)).ToString();
+        }
+
+        private void wstecz_Click(object sender, EventArgs e)
+        {
+            
+            if(textBox1.Text.Length > 0)
+            {
+                textBox1.Text = textBox1.Text.Remove(textBox1.Text.Length - 1, 1);
+            }
+            if (textBox1.Text=="")
+            {
+                textBox1.Text = "0";
+            }
+        }
+
+        private void blog_Click(object sender, EventArgs e)
+        {
+            textBox1.Text = (Math.Log(double.Parse(textBox1.Text))).ToString();
         }
     }
 }
