@@ -22,6 +22,7 @@ namespace kalku_all_in_one
             kalkulator1.Hide();
             jednostki__i_miary1.Hide();
             konwenter1.Hide();
+            temperatura1.Hide();
         }
 
    
@@ -45,6 +46,7 @@ namespace kalku_all_in_one
         {
             jednostki__i_miary1.Hide();
             konwenter1.Hide();
+            temperatura1.Hide();
 
             kalkulator1.Show();
             kalkulator1.BringToFront();
@@ -54,6 +56,7 @@ namespace kalku_all_in_one
         {
             kalkulator1.Hide();
             jednostki__i_miary1.Hide();
+            temperatura1.Hide();
 
             konwenter1.Show();
             konwenter1.BringToFront();
@@ -64,6 +67,7 @@ namespace kalku_all_in_one
 
             kalkulator1.Hide();
             konwenter1.Hide();
+            temperatura1.Hide();
 
             jednostki__i_miary1.Show();
             jednostki__i_miary1.BringToFront();
@@ -77,6 +81,23 @@ namespace kalku_all_in_one
         private void wyjscieToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void termometrToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            kalkulator1.Hide();
+            konwenter1.Hide();
+            jednostki__i_miary1.Hide();
+
+
+            temperatura1.Show();
+            temperatura1.BringToFront();
+        }
+
+        private void autorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Autor: Bartlomiej Puzio","Aplauz dla");
         }
     }
 }

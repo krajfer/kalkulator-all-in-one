@@ -62,13 +62,13 @@
             // 
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
-            "gramy",
-            "dag",
+            "gram",
+            "dekagramy",
             "funty",
             "kg",
             "tony",
             "mg"});
-            this.comboBox1.Location = new System.Drawing.Point(73, 154);
+            this.comboBox1.Location = new System.Drawing.Point(73, 153);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 2;
@@ -108,8 +108,8 @@
             // 
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Items.AddRange(new object[] {
-            "gramy",
-            "dag",
+            "gram",
+            "dekagramy",
             "funty",
             "kg",
             "tony",

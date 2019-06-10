@@ -32,11 +32,14 @@
             this.kalkulatorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.konwenterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.jednostkiIMiaryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.termometrToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.wyjscieToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.temperatura1 = new kalku_all_in_one.Temperatura();
             this.kalkulator1 = new kalku_all_in_one.Kalkulator();
             this.konwenter1 = new kalku_all_in_one.konwenter();
             this.jednostki__i_miary1 = new kalku_all_in_one.Jednostki__i_miary();
-            this.wyjscieToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.autorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -47,6 +50,8 @@
             this.kalkulatorToolStripMenuItem,
             this.konwenterToolStripMenuItem,
             this.jednostkiIMiaryToolStripMenuItem,
+            this.termometrToolStripMenuItem,
+            this.autorToolStripMenuItem,
             this.wyjscieToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -75,8 +80,23 @@
             this.jednostkiIMiaryToolStripMenuItem.Text = "Jednostki i Miary";
             this.jednostkiIMiaryToolStripMenuItem.Click += new System.EventHandler(this.jednostkiIMiaryToolStripMenuItem_Click_1);
             // 
+            // termometrToolStripMenuItem
+            // 
+            this.termometrToolStripMenuItem.Name = "termometrToolStripMenuItem";
+            this.termometrToolStripMenuItem.Size = new System.Drawing.Size(78, 20);
+            this.termometrToolStripMenuItem.Text = "Termometr";
+            this.termometrToolStripMenuItem.Click += new System.EventHandler(this.termometrToolStripMenuItem_Click);
+            // 
+            // wyjscieToolStripMenuItem
+            // 
+            this.wyjscieToolStripMenuItem.Name = "wyjscieToolStripMenuItem";
+            this.wyjscieToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
+            this.wyjscieToolStripMenuItem.Text = "Wyjscie";
+            this.wyjscieToolStripMenuItem.Click += new System.EventHandler(this.wyjscieToolStripMenuItem_Click);
+            // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.temperatura1);
             this.panel1.Controls.Add(this.kalkulator1);
             this.panel1.Controls.Add(this.konwenter1);
             this.panel1.Controls.Add(this.jednostki__i_miary1);
@@ -84,6 +104,13 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(722, 479);
             this.panel1.TabIndex = 1;
+            // 
+            // temperatura1
+            // 
+            this.temperatura1.Location = new System.Drawing.Point(104, 18);
+            this.temperatura1.Name = "temperatura1";
+            this.temperatura1.Size = new System.Drawing.Size(521, 377);
+            this.temperatura1.TabIndex = 2;
             // 
             // kalkulator1
             // 
@@ -108,12 +135,12 @@
             this.jednostki__i_miary1.Size = new System.Drawing.Size(722, 479);
             this.jednostki__i_miary1.TabIndex = 0;
             // 
-            // wyjscieToolStripMenuItem
+            // autorToolStripMenuItem
             // 
-            this.wyjscieToolStripMenuItem.Name = "wyjscieToolStripMenuItem";
-            this.wyjscieToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
-            this.wyjscieToolStripMenuItem.Text = "Wyjscie";
-            this.wyjscieToolStripMenuItem.Click += new System.EventHandler(this.wyjscieToolStripMenuItem_Click);
+            this.autorToolStripMenuItem.Name = "autorToolStripMenuItem";
+            this.autorToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
+            this.autorToolStripMenuItem.Text = "Autor";
+            this.autorToolStripMenuItem.Click += new System.EventHandler(this.autorToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -150,6 +177,9 @@
         private konwenter konwenter1;
         private Jednostki__i_miary jednostki__i_miary1;
         private System.Windows.Forms.ToolStripMenuItem wyjscieToolStripMenuItem;
+        private Temperatura temperatura1;
+        private System.Windows.Forms.ToolStripMenuItem termometrToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem autorToolStripMenuItem;
     }
 }
 

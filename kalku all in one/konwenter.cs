@@ -18,12 +18,14 @@ namespace kalku_all_in_one
         }
 
         private void button1_Click(object sender, EventArgs e)
-        {
+        {   
+           
             string zjakiej, dojakiej,url;
             zjakiej = comboBox1.SelectedItem.ToString();
             dojakiej = comboBox2.SelectedItem.ToString();
             url=("https://www.google.com/search?q="+ilosc+" "+zjakiej+"na+"+dojakiej+"&oq="+ilosc+" "+zjakiej+ "na+" + dojakiej);
             webBrowser1.Navigate(url);
+           
         }
 
         private void webBrowser1_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
@@ -33,7 +35,7 @@ namespace kalku_all_in_one
 
         private void konwenter_Load(object sender, EventArgs e)
         {
-                
+            
         }
     }
 }
