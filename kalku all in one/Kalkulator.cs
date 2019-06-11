@@ -109,37 +109,43 @@ namespace kalku_all_in_one
 
         private void bpierwiastek_Click(object sender, EventArgs e)
         {
+            //obliczanie pierwiastka
             textBox1.Text = (Math.Sqrt(double.Parse(textBox1.Text))).ToString();
         }
 
         private void bpotega_Click(object sender, EventArgs e)
         {
+            //obliczanie do potegi 2
             textBox1.Text = (Math.Pow(double.Parse(textBox1.Text),2)).ToString();
         }
 
         private void sin_Click(object sender, EventArgs e)
         {
+            //obliczanie sin
             textBox1.Text = (Math.Sin(double.Parse(textBox1.Text))).ToString();
         }
 
         private void cos_Click(object sender, EventArgs e)
         {
-            textBox1.Text = (Math.Sin(double.Parse(textBox1.Text))).ToString();
+            //obliczanie cos
+            textBox1.Text = (Math.Cos(double.Parse(textBox1.Text))).ToString();
         }
 
         private void tg_Click(object sender, EventArgs e)
         {
+            //obliczanie tan
             textBox1.Text = (Math.Tan(double.Parse(textBox1.Text))).ToString();
         }
 
         private void potega3_Click(object sender, EventArgs e)
         {
+            //obliczanie do potegi 3
             textBox1.Text = (Math.Pow(double.Parse(textBox1.Text), 3)).ToString();
         }
 
         private void wstecz_Click(object sender, EventArgs e)
         {
-            
+            //warunek dla przycisku cofającego ciąg znaków dla ilosci znaków wiekszej niz 1 w textboxie cofa je o jeden z kazdym kliknieciem
             if(textBox1.Text.Length > 0)
             {
                 textBox1.Text = textBox1.Text.Remove(textBox1.Text.Length - 1, 1);
@@ -152,6 +158,7 @@ namespace kalku_all_in_one
 
         private void blog_Click(object sender, EventArgs e)
         {
+            //obliczanie logarytmu
             textBox1.Text = (Math.Log(double.Parse(textBox1.Text))).ToString();
         }
     }
