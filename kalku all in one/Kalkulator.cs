@@ -25,9 +25,9 @@ namespace kalku_all_in_one
         {
             if ((textBox1.Text == "0") || (operacja_wykonana)) //jesli przy pobieraniu znaku textBox1 == 0 
                 textBox1.Clear();       //czysci textbox1 słuzyc ma to temu by na początku przy wpisywaniu liczby nie wyswietlało zera
-
+            operacja_wykonana = false;
             Button z = (Button)sender;//pobieranie znaku z buttona
-            
+            aktualnie.Text += z.Text;
             if (z.Text == ",")
             {
                 if (!textBox1.Text.Contains(","))
@@ -51,6 +51,7 @@ namespace kalku_all_in_one
                 operacja = z.Text;
                 aktualnie.Text = wynik + " " + operacja;
                 operacja_wykonana = true;
+                
             }
             else
             {
@@ -65,6 +66,7 @@ namespace kalku_all_in_one
 
         private void bwynik_Click(object sender, EventArgs e)
         {
+            
             switch (operacja)
             {
                 case "+":
@@ -87,6 +89,7 @@ namespace kalku_all_in_one
             }
            
             operacja_wykonana = false;
+            
 
         }
 
@@ -100,6 +103,8 @@ namespace kalku_all_in_one
             textBox1.Clear();
             textBox1.Text = "0";
             wynik = 0;
+            aktualnie.Text = "";
+
         }
 
         private void bpierwiastek_Click(object sender, EventArgs e)
