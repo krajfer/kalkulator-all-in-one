@@ -28,6 +28,7 @@ namespace kalku_all_in_one
             operacja_wykonana = false;
             Button z = (Button)sender;//pobieranie znaku z buttona
             aktualnie.Text += z.Text;
+            //poniżej warunek który pilnuje by przecinek w ciągu znaków był użyty raz
             if (z.Text == ",")
             {
                 if (!textBox1.Text.Contains(","))
@@ -66,7 +67,7 @@ namespace kalku_all_in_one
 
         private void bwynik_Click(object sender, EventArgs e)
         {
-            
+         //po wybraniu znaku zapisanego w "operacja" program na podstawie tych znaków wybierze uzyty znak i obliczy wynik zgodnie z wzorami   
             switch (operacja)
             {
                 case "+":
@@ -100,6 +101,7 @@ namespace kalku_all_in_one
 
         private void breset_Click(object sender, EventArgs e)
         {
+            //użycie przycisku reset powoduje zresetowanie, wyczyszczenie textBox1 zawierającego aktualne działania oraz wyczyszczenie Labela"aktualnie" wyswietlajacego ostatnie działania
             textBox1.Clear();
             textBox1.Text = "0";
             wynik = 0;

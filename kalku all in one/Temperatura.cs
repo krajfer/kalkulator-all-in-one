@@ -19,6 +19,7 @@ namespace kalku_all_in_one
 
         private void Zamiana_Click(object sender, EventArgs e)
         {
+            //przeliczanie wartosci temperatur
             if (comboBox1.Text == "Celcjusz" && comboBox2.Text == "Fahrenheit") { tzmieniona.Text = ((9 * Double.Parse(textBox1.Text) / 5) + 32).ToString(); }
             if (comboBox1.Text == "Celcjusz" && comboBox2.Text == "Kelvin") { tzmieniona.Text = ( Double.Parse(textBox1.Text)  + 273.15).ToString(); }
             if (comboBox1.Text == "Fahrenheit" && comboBox2.Text == "Celcjusz") { tzmieniona.Text = ((( Double.Parse(textBox1.Text) - 32) * 5)/9).ToString(); }

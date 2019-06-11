@@ -19,6 +19,7 @@ namespace kalku_all_in_one
         }
         private void Form1_Load(object sender, EventArgs e)
         { 
+            //ukrywanie wszystkich kontrolek
             kalkulator1.Hide();
             jednostki__i_miary1.Hide();
             konwenter1.Hide();
@@ -44,6 +45,7 @@ namespace kalku_all_in_one
 
         private void kalkulatorToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
+            //ukrywanie wszystkich innych kontrolek oraz wyswietlanie aktualnie potrzebnej
             jednostki__i_miary1.Hide();
             konwenter1.Hide();
             temperatura1.Hide();
@@ -54,6 +56,7 @@ namespace kalku_all_in_one
 
         private void konwenterToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
+            //ukrywanie wszystkich innych kontrolek oraz wyswietlanie aktualnie potrzebnej
             kalkulator1.Hide();
             jednostki__i_miary1.Hide();
             temperatura1.Hide();
@@ -64,7 +67,7 @@ namespace kalku_all_in_one
 
         private void jednostkiIMiaryToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
-
+            //ukrywanie wszystkich innych kontrolek oraz wyswietlanie aktualnie potrzebnej
             kalkulator1.Hide();
             konwenter1.Hide();
             temperatura1.Hide();
@@ -80,12 +83,13 @@ namespace kalku_all_in_one
 
         private void wyjscieToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            //zamyka aplikacje
             this.Close();
         }
 
         private void termometrToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            //ukrywanie wszystkich innych kontrolek oraz wyswietlanie aktualnie potrzebnej
             kalkulator1.Hide();
             konwenter1.Hide();
             jednostki__i_miary1.Hide();
@@ -97,7 +101,8 @@ namespace kalku_all_in_one
 
         private void autorToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Autor: Bartlomiej Puzio","Aplauz dla");
+            //informacje o Autorze
+            MessageBox.Show("Autor: Bartlomiej Puzio", "informacje o Autorze");
         }
     }
 }
