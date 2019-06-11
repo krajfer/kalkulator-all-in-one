@@ -19,7 +19,7 @@ namespace kalku_all_in_one
 
         private void button1_Click(object sender, EventArgs e)
         {
-            webBrowser1.Navigate(new Uri("http://www.convertmymoney.com/"));
+            webBrowser1.Navigate("http://www.convertmymoney.com/");
            
         }
 

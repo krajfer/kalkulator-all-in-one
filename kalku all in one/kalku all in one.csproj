@@ -33,9 +33,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="ExchangeRate, Version=1.0.5.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\exchange-rate.1.0.5\lib\net452\ExchangeRate.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -47,12 +44,6 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
-    <Reference Include="TeixeiraSoftware.Finance.Currency, Version=4.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\TeixeiraSoftware.Finance.Currency.4.1.0\lib\netstandard2.0\TeixeiraSoftware.Finance.Currency.dll</HintPath>
-    </Reference>
-    <Reference Include="TeixeiraSoftware.Finance.ICurrency, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\TeixeiraSoftware.Finance.ICurrency.1.0.0\lib\netstandard2.0\TeixeiraSoftware.Finance.ICurrency.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Form1.cs">
@@ -111,7 +102,6 @@
     <EmbeddedResource Include="Temperatura.resx">
       <DependentUpon>Temperatura.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
