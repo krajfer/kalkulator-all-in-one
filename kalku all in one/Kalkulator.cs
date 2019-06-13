@@ -21,7 +21,7 @@ namespace kalku_all_in_one
             InitializeComponent();
         }
 
-        private void pobieranieznakow(object sender, EventArgs e)   
+        public void pobieranieznakow(object sender, EventArgs e)   
         {
             if ((textBox1.Text == "0") || (operacja_wykonana)) //jesli przy pobieraniu znaku textBox1 == 0 
                 textBox1.Clear();       //czysci textbox1 słuzyc ma to temu by na początku przy wpisywaniu liczby nie wyswietlało zera
@@ -40,7 +40,7 @@ namespace kalku_all_in_one
         }
 
 
-        private void dzialanie(object sender, EventArgs e)
+        public void dzialanie(object sender, EventArgs e)
         {
             Button z = (Button)sender; //pobieranie znaku z buttona
           
@@ -65,7 +65,7 @@ namespace kalku_all_in_one
             
         }
 
-        private void bwynik_Click(object sender, EventArgs e)
+        public void bwynik_Click(object sender, EventArgs e)
         {
          //po wybraniu znaku zapisanego w "operacja" program na podstawie tych znaków wybierze uzyty znak i obliczy wynik zgodnie z wzorami   
             switch (operacja)
@@ -94,12 +94,12 @@ namespace kalku_all_in_one
 
         }
 
-        private void Kalkulator_Load(object sender, EventArgs e)
+        public void Kalkulator_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void breset_Click(object sender, EventArgs e)
+        public void breset_Click(object sender, EventArgs e)
         {
             //użycie przycisku reset powoduje zresetowanie, wyczyszczenie textBox1 zawierającego aktualne działania oraz wyczyszczenie Labela"aktualnie" wyswietlajacego ostatnie działania
             textBox1.Clear();
@@ -109,43 +109,43 @@ namespace kalku_all_in_one
 
         }
 
-        private void bpierwiastek_Click(object sender, EventArgs e)
+        public void Bpierwiastek_Click(object sender, EventArgs e)
         {
             //obliczanie pierwiastka
             textBox1.Text = (Math.Sqrt(double.Parse(textBox1.Text))).ToString();
         }
 
-        private void bpotega_Click(object sender, EventArgs e)
+        public void Bpotega_Click(object sender, EventArgs e)
         {
             //obliczanie do potegi 2
             textBox1.Text = (Math.Pow(double.Parse(textBox1.Text),2)).ToString();
         }
 
-        private void sin_Click(object sender, EventArgs e)
+        public void Sin_Click(object sender, EventArgs e)
         {
             //obliczanie sin
             textBox1.Text = (Math.Sin(double.Parse(textBox1.Text))).ToString();
         }
 
-        private void cos_Click(object sender, EventArgs e)
+        public void Cos_Click(object sender, EventArgs e)
         {
             //obliczanie cos
             textBox1.Text = (Math.Cos(double.Parse(textBox1.Text))).ToString();
         }
 
-        private void tg_Click(object sender, EventArgs e)
+        public void Tg_Click(object sender, EventArgs e)
         {
             //obliczanie tan
             textBox1.Text = (Math.Tan(double.Parse(textBox1.Text))).ToString();
         }
 
-        private void potega3_Click(object sender, EventArgs e)
+        public void potega3_Click(object sender, EventArgs e)
         {
             //obliczanie do potegi 3
             textBox1.Text = (Math.Pow(double.Parse(textBox1.Text), 3)).ToString();
         }
 
-        private void wstecz_Click(object sender, EventArgs e)
+        public void wstecz_Click(object sender, EventArgs e)
         {
             //warunek dla przycisku cofającego ciąg znaków dla ilosci znaków wiekszej niz 1 w textboxie cofa je o jeden z kazdym kliknieciem
             if(textBox1.Text.Length > 0)
@@ -158,7 +158,7 @@ namespace kalku_all_in_one
             }
         }
 
-        private void blog_Click(object sender, EventArgs e)
+        public void blog_Click(object sender, EventArgs e)
         {
             //obliczanie logarytmu
             textBox1.Text = (Math.Log(double.Parse(textBox1.Text))).ToString();

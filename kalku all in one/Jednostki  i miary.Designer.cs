@@ -257,6 +257,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Jednostki__i_miary";
             this.Size = new System.Drawing.Size(722, 479);
+            this.Load += new System.EventHandler(this.Jednostki__i_miary_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ilosc)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

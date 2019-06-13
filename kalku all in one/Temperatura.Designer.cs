@@ -141,6 +141,7 @@
             this.Controls.Add(this.textBox1);
             this.Name = "Temperatura";
             this.Size = new System.Drawing.Size(507, 377);
+            this.Load += new System.EventHandler(this.Temperatura_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

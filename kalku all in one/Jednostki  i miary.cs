@@ -41,7 +41,7 @@ namespace kalku_all_in_one
             
         }
 
-        private void miary_Click(object sender, EventArgs e)
+        public void miary_Click(object sender, EventArgs e)
         {
             
 
@@ -79,7 +79,7 @@ namespace kalku_all_in_one
 
         }
 
-        private void jednostki_Click(object sender, EventArgs e)
+        public void jednostki_Click(object sender, EventArgs e)
         {
 
 
@@ -124,6 +124,9 @@ namespace kalku_all_in_one
 
         }
 
-        
+        private void Jednostki__i_miary_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

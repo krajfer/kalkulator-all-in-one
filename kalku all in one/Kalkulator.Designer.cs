@@ -187,7 +187,7 @@
             this.bpotega.TabIndex = 12;
             this.bpotega.Text = "X²";
             this.bpotega.UseVisualStyleBackColor = true;
-            this.bpotega.Click += new System.EventHandler(this.bpotega_Click);
+            this.bpotega.Click += new System.EventHandler(this.Bpotega_Click);
             // 
             // bpierwiastek
             // 
@@ -197,7 +197,7 @@
             this.bpierwiastek.TabIndex = 13;
             this.bpierwiastek.Text = "√";
             this.bpierwiastek.UseVisualStyleBackColor = true;
-            this.bpierwiastek.Click += new System.EventHandler(this.bpierwiastek_Click);
+            this.bpierwiastek.Click += new System.EventHandler(this.Bpierwiastek_Click);
             // 
             // bdzielenie
             // 
@@ -286,7 +286,7 @@
             this.tg.TabIndex = 23;
             this.tg.Text = "tg";
             this.tg.UseVisualStyleBackColor = true;
-            this.tg.Click += new System.EventHandler(this.tg_Click);
+            this.tg.Click += new System.EventHandler(this.Tg_Click);
             // 
             // sin
             // 
@@ -296,7 +296,7 @@
             this.sin.TabIndex = 23;
             this.sin.Text = "sin";
             this.sin.UseVisualStyleBackColor = true;
-            this.sin.Click += new System.EventHandler(this.sin_Click);
+            this.sin.Click += new System.EventHandler(this.Sin_Click);
             // 
             // cos
             // 
@@ -306,7 +306,7 @@
             this.cos.TabIndex = 24;
             this.cos.Text = "cos";
             this.cos.UseVisualStyleBackColor = true;
-            this.cos.Click += new System.EventHandler(this.cos_Click);
+            this.cos.Click += new System.EventHandler(this.Cos_Click);
             // 
             // potega3
             // 
