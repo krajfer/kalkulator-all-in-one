@@ -100,7 +100,7 @@ namespace kalku_all_in_one.Tests
         {
 
         }
-
+        //testowanie metody zamiany temperatur
         [TestMethod()]
         public void Zamiana_ClickTest()
         {
@@ -110,15 +110,21 @@ namespace kalku_all_in_one.Tests
             Double textBox1 = 7;
             if (comboBox1 == "Celcjusz" && comboBox2 == "Fahrenheit") { tzmieniona = ((9 * (textBox1) / 5) + 32); }
         }
-
+        //testowanie metody miar
         [TestMethod()]
         public void miary_ClickTest()
         {
             String comboBox3 = "metry";
             String comboBox4 = "dm";
             decimal wynikmiar;
-            decimal ilosc=5;
-            if (comboBox3 == "metry" && comboBox4 == "dm") { wynikmiar= ((decimal)10 * (decimal)ilosc); }
+            decimal ilosc = 5;
+            if (comboBox3 == "metry" && comboBox4 == "dm") { wynikmiar = ((decimal)10 * (decimal)ilosc); }
+        }
+
+        [TestMethod()]
+        public void jednostki_ClickTest()
+        {
+
         }
     }
 }

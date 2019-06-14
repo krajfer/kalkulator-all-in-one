@@ -32,7 +32,7 @@ namespace kalku_all_in_one.Tests
         {
 
         }
-
+        //testowanie metody potegi
         [TestMethod()]
         public void potega3_ClickTest()
         {
@@ -56,7 +56,7 @@ namespace UnitTestProject1
  
 
         }
-
+        //testowanie pierwiastkow
         [TestMethod]
         public void Test1()
         {
