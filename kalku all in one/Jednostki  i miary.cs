@@ -40,12 +40,9 @@ namespace kalku_all_in_one
         {
             
         }
-
+        ///przeliczanie jednostek odległosci z combobox3 na jednostki odleglosci z comboBox4 , wynik wyswietlany jest w wynikmiar przy użyciu odpowiedniego wzoru
         public void miary_Click(object sender, EventArgs e)
         {
-            
-
-            //przeliczanie jednostek odległosci z combobox3 na jednostki odleglosci z comboBox4 , wynik wyswietlany jest w wynikmiar
             if (comboBox3.Text == "metry" && comboBox4.Text == "dm") { wynikmiar.Text = ((decimal)10 * (decimal)ilosc.Value).ToString(); }
             if (comboBox3.Text == "metry" && comboBox4.Text == "cm") { wynikmiar.Text = ((decimal)100 * (decimal)ilosc.Value).ToString(); }
             if (comboBox3.Text == "metry" && comboBox4.Text == "mm") { wynikmiar.Text = ((decimal)1000 * (decimal)ilosc.Value).ToString(); }
@@ -78,13 +75,10 @@ namespace kalku_all_in_one
             if (comboBox3.Text == "mm" && comboBox4.Text == "mile") { wynikmiar.Text = ((decimal)0.00000062137 * (decimal)ilosc.Value).ToString(); }
 
         }
-
+        ///przeliczanie z wartosci/jednostek masy, przy użyciu odpowiedniego wzoru, pierwszej(combobox1) na drugą (combobox2) i przypisanie jej do textboxa który nazywany jest wynikjednostek 
         public void jednostki_Click(object sender, EventArgs e)
         {
-
-
-
-            //przeliczanie z wartosci/jednostek masy, pierwszej(combobox1) na drugą (combobox2) i przypisanie jej do textboxa który nazywany jest wynikjednostek 
+           
             if (comboBox1.Text == "kg" && comboBox2.Text == "kg") { wynikjednostek.Text = ((decimal)1 * (decimal)ilosc.Value).ToString(); }
             if (comboBox1.Text == "kg" && comboBox2.Text == "mg") { wynikjednostek.Text = ((decimal)1000000 * (decimal)ilosc.Value).ToString(); }
             if (comboBox1.Text == "kg" && comboBox2.Text == "tony") { wynikjednostek.Text = ((decimal)0.001 * (decimal)ilosc.Value).ToString(); }

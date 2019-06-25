@@ -20,7 +20,11 @@ namespace kalku_all_in_one
         {
             InitializeComponent();
         }
-
+        /// <summary>
+        /// metoda do pobierania znaków oraz uzycia przecinka w liczbach
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         public void pobieranieznakow(object sender, EventArgs e)   
         {
             if ((textBox1.Text == "0") || (operacja_wykonana)) //jesli przy pobieraniu znaku textBox1 == 0 
@@ -39,10 +43,14 @@ namespace kalku_all_in_one
                 textBox1.Text = textBox1.Text + z.Text;//do textBox1 wpisywane bedą ciągiem liczby z wcisnietyh buttonow
         }
 
-
+        /// <summary>
+        /// metoda do działania
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         public void dzialanie(object sender, EventArgs e)
         {
-            Button z = (Button)sender; //pobieranie znaku z buttona
+            Button z = (Button)sender; ///pobieranie znaku z buttona
           
          
         
@@ -64,10 +72,10 @@ namespace kalku_all_in_one
             }
             
         }
-
+        ///po wybraniu znaku zapisanego w "operacja" program na podstawie tych znaków wybierze uzyty znak i obliczy wynik zgodnie z wzorami  
         public void bwynik_Click(object sender, EventArgs e)
         {
-         //po wybraniu znaku zapisanego w "operacja" program na podstawie tych znaków wybierze uzyty znak i obliczy wynik zgodnie z wzorami   
+          
             switch (operacja)
             {
                 case "+":
@@ -99,31 +107,32 @@ namespace kalku_all_in_one
 
         }
 
+        ///użycie przycisku reset powoduje zresetowanie, wyczyszczenie textBox1 zawierającego aktualne działania oraz wyczyszczenie Labela"aktualnie" wyswietlajacego ostatnie działania
         public void breset_Click(object sender, EventArgs e)
         {
-            //użycie przycisku reset powoduje zresetowanie, wyczyszczenie textBox1 zawierającego aktualne działania oraz wyczyszczenie Labela"aktualnie" wyswietlajacego ostatnie działania
+          
             textBox1.Clear();
             textBox1.Text = "0";
             wynik = 0;
             aktualnie.Text = "";
 
         }
-
+        ///obliczanie pierwiastka
         public void Bpierwiastek_Click(object sender, EventArgs e)
         {
-            //obliczanie pierwiastka
+           
             textBox1.Text = (Math.Sqrt(double.Parse(textBox1.Text))).ToString();
         }
-
+        ///obliczanie do potegi 2
         public void Bpotega_Click(object sender, EventArgs e)
         {
-            //obliczanie do potegi 2
+            
             textBox1.Text = (Math.Pow(double.Parse(textBox1.Text),2)).ToString();
         }
-
+        ///obliczanie sin
         public void Sin_Click(object sender, EventArgs e)
         {
-            //obliczanie sin
+           
             textBox1.Text = (Math.Sin(double.Parse(textBox1.Text))).ToString();
         }
 
@@ -132,22 +141,22 @@ namespace kalku_all_in_one
             //obliczanie cos
             textBox1.Text = (Math.Cos(double.Parse(textBox1.Text))).ToString();
         }
-
+        ///obliczanie tan
         public void Tg_Click(object sender, EventArgs e)
         {
-            //obliczanie tan
+           
             textBox1.Text = (Math.Tan(double.Parse(textBox1.Text))).ToString();
         }
-
+        ///obliczanie do potegi 3
         public void potega3_Click(object sender, EventArgs e)
         {
-            //obliczanie do potegi 3
+           
             textBox1.Text = (Math.Pow(double.Parse(textBox1.Text), 3)).ToString();
         }
-
+        ///warunek dla przycisku cofającego ciąg znaków dla ilosci znaków wiekszej niz 1 w textboxie cofa je o jeden z kazdym kliknieciem
         public void wstecz_Click(object sender, EventArgs e)
         {
-            //warunek dla przycisku cofającego ciąg znaków dla ilosci znaków wiekszej niz 1 w textboxie cofa je o jeden z kazdym kliknieciem
+           
             if(textBox1.Text.Length > 0)
             {
                 textBox1.Text = textBox1.Text.Remove(textBox1.Text.Length - 1, 1);
@@ -157,10 +166,9 @@ namespace kalku_all_in_one
                 textBox1.Text = "0";
             }
         }
-
+        ///obliczanie logarytmu
         public void blog_Click(object sender, EventArgs e)
         {
-            //obliczanie logarytmu
             textBox1.Text = (Math.Log(double.Parse(textBox1.Text))).ToString();
         }
     }

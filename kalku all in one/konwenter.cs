@@ -16,10 +16,10 @@ namespace kalku_all_in_one
         {
             InitializeComponent();
         }
-
+        ///połaczenie się z stroną http://www.convertmymoney.com/ która posiada aktualne kursy walut
         private void button1_Click(object sender, EventArgs e)
         {
-            //połaczenie się z stroną która posiada aktualne kursy walut
+            
             webBrowser1.Navigate("http://www.convertmymoney.com/");
            
         }

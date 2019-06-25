@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kalku-test", "UnitTestProje
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "kalku all in oneTests", "kalku all in oneTests\kalku all in oneTests.csproj", "{F143F1D9-CE0D-46F3-BC3C-C29E00BB13EE}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "instalacja", "instalacja\instalacja.vdproj", "{211B591C-1784-4A14-989D-EC203788CFD4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,8 @@ Global
 		{F143F1D9-CE0D-46F3-BC3C-C29E00BB13EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F143F1D9-CE0D-46F3-BC3C-C29E00BB13EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F143F1D9-CE0D-46F3-BC3C-C29E00BB13EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{211B591C-1784-4A14-989D-EC203788CFD4}.Debug|Any CPU.ActiveCfg = Debug
+		{211B591C-1784-4A14-989D-EC203788CFD4}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
